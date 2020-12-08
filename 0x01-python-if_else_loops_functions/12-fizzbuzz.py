@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    for n in range (1, 101):
-        if n % 5 == 0 or n % 3 == 0:
-            if n % 3 == 0:
-                print("Fizz", end="")
-            if n % 5 == 0:
-                print("Buzz", end="")
-        else:
-            print("{:d}".format(n), end="")
-        if n < 100:
-            print(" ", end="")
+    a = "Fizz"
+    b = "Buzz"
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            print("{:s}{:s}".format(a, b), end=" ")
+            continue
+        if i % 3 == 0:
+            print("{:s}".format(a), end=" ")
+            continue
+        if i % 5 == 0:
+            print("{:s}".format(b), end=" ")
+            continue
+        print("{:d}".format(i), end=" ")
