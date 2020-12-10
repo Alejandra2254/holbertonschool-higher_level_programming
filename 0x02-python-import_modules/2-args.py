@@ -9,6 +9,5 @@ if __name__ == "__main__":
     else:
         print("{:d} arguments.".format(arg - 1))
     while arg != n:
-        a = argv[n]
         n += 1
         print("{:d}: {:s}".format(n - 1, str(argv[n - 1])))
