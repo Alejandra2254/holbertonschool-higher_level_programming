@@ -1,42 +1,38 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
+
+
 /**
- * is_palindrome - function that checks if a singly linked list is a palindrome
- * @head: pointer to the first node
- * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ * checker_is_palindrome - This checks the function for is_palindrome
+ * @head: This is the beginning of the list.
+ * @ending: This is the end of the list.
+ *
+ * Return: 1 for True and 0 for False.
  */
+
+int checker_is_palindrome(listint_t **head, listint_t *ending)
+{
+	if (ending == NULL)
+		return (1);
+	if (checker_is_palindrome(head, ending->next) && (*head)->n == ending->n)
+	{
+		*head = (*head)->next;
+		return (1);
+	}
+	return (0);
+}
+
+/**
+ * is_palindrome - Checks if singly linked list is palindrome
+ * @head: This is a double ponter to our head
+ *
+ * Return: 0 if failed, 1 if success
+ */
+
 int is_palindrome(listint_t **head)
 {
-	listint_t *newhead, *current;
-
-	current = *head; 
-	newhead = reversel(head);
-
-	while (newhead && head )
-	{
-		if (newhead->n != current->n)
-				return 0;
-		newhead = newhead->next;
-		current = current->next;
-	}
-	return(newhead == NULL && current == NULL);
-}
-listint_t *reversel(listint_t **head)
-{
-	listint_t *temp, *newhead, *current;
-
-	current = *head; 
-	if (*head == NULL)
-		return 0;
-	while (*head)
-	{
-		temp = malloc(sizeof(listint_t));
-		temp->n = current->n;
-		temp->next = newhead;
-		newhead = temp;
-		current = current->next;
-	}
-	return (newhead);
+	if (*head == NULL || *head == NULL)
+		return (1);
+	return (checker_is_palindrome(head, *head));
 }
