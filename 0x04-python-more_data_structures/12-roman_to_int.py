@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     number = 0
-    if roman_string is None:
+    if roman_string is None or isinstance(roman_string, str) is False:
         return 0
     for n in range(len(roman_string)):
         if roman_string[n] == "M":
