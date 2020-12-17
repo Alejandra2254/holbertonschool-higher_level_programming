@@ -6,6 +6,8 @@ def roman_to_int(roman_string):
     for n in range(len(roman_string)):
         if roman_string[n] == "M":
             number += 1000
+            if roman_string[n-1] == "C" and n != 0:
+                number -= 200
         if roman_string[n] == "D":
             number += 500
             if roman_string[n-1] == "C" and n != 0:
