@@ -14,8 +14,8 @@ def roman_to_int(roman_string):
                 number -= 200
         if roman_string[n] == "C":
             number += 100
-            if roman_string[n-1] == "L" and n != 0:
-                number -= 200
+            if roman_string[n-1] == "X" and n != 0:
+                number -= 20
         if roman_string[n] == "L":
             number += 50
             if roman_string[n-1] == "X" and n != 0:
