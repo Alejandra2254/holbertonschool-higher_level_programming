@@ -1,0 +1,3 @@
+# Python, Exceptions
+
+son un tipo de error, diferentes a los de sintaxis, los cuales son detectados durante la ejecucion ...
