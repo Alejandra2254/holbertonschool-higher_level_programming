@@ -15,3 +15,15 @@ to be able to identify errors more quickly and correct them in the shortest poss
 There are two options for writing a Doctest:
 * They can be written in text fragments (in the same code)
 * Another simple application of doctest is to test interactive examples in a text file. (Doctest in a different file)
+
+Example:
+```
+def  mi_función ( a ,  b ): 
+    "" " 
+    >>> mi_función (2, 3) 
+    6 
+    >>> mi_función ('a', 3) 
+    'aaa' 
+    " "" 
+    return  a  *  b
+```
