@@ -27,3 +27,26 @@ def  mi_función ( a ,  b ):
     " "" 
     return  a  *  b
 ```
+To run the tests, use doctest as the main program using the -m option of the interpreter. Generally, no results are produced while the tests are running, so the following example includes the -v option to make the result more verbose.
+
+```
+$ python -m doctest -v doctest_simple.py
+
+Trying:
+    my_function(2, 3)
+Expecting:
+    6
+ok
+Trying:
+    my_function('a', 3)
+Expecting:
+    'aaa'
+ok
+1 items had no tests:
+    doctest_simple
+1 items passed all tests:
+   2 tests in doctest_simple.my_function
+2 tests in 2 items.
+2 passed and 0 failed.
+Test passed.
+```
