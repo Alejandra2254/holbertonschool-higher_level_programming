@@ -50,3 +50,25 @@ ok
 2 passed and 0 failed.
 Test passed.
 ```
+### What about Exceptions?
+No problem, provided that the traceback is the only output produced by the example: just paste in the traceback. Since tracebacks contain details that are likely to change rapidly (for example, exact file paths and line numbers), this is one case where doctest works hard to be flexible in what it accepts.
+```
+>>> [1, 2, 3].remove(42)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in ?
+ValueError: list.remove(x): x not in list
+```
+The expected output for an exception must start with a traceback header, which may be either of the following two lines, indented the same as the first line of the example:
+```
+Traceback (most recent call last):
+Traceback (innermost last):
+```
+Best practice is to omit the traceback stack, unless it adds significant documentation value to the example. So the last example is probably better as:
+```
+>>> raise ValueError('multi\n    line\ndetail')
+Traceback (most recent call last):
+    ...
+ValueError: multi
+    line
+detail
+```
