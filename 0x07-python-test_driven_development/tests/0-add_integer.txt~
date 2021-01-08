@@ -6,20 +6,9 @@ Using ``a and b must be integers or floats``
 	>>> add_integer = __import__('0-add_integer').add_integer
 
 Validate cases:
-
 	 >>> add_integer(1,2)
 	 3
 
-	 >>> add_integer(-5,6)
-	 1
-
-	 >>> add_integer(100000000000000000000000, 1)
-	 100000000000000000000001
-
-	 >>> add_integer(0x16)
-	 120
-
-Exceptions:
 	 >>> add_integer(4,"School")
 	 Traceback (most recent call last):
 	 ...
@@ -29,13 +18,3 @@ Exceptions:
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: a must be an integer
-
-	 >>> print(add_integer(None))
-         Traceback (most recent call last):
-         ...
-         TypeError: a must be an integer
-
-	 >>> add_integer('num')
-         Traceback (most recent call last):
-         ...
-         TypeError: a must be an integer
