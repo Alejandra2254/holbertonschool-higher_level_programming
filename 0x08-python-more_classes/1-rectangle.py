@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-Write a class Rectangle that defines a rectangl
+Write a class Rectangle that defines a rectangle
 """
 
 
 class Rectangle:
     """
-    Class Rectangle with attributes width and height
+    Class Rectangle validated privated instance attribute width and height
     """
     def __init__(self, width=0, height=0):
-        """constructor function"""
+        """Constructor Function using property and setter"""
         self.width = width
         self.height = height
 
@@ -20,23 +20,23 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Method Evalute the value of width"""
+        """Method Evaluate the value of width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
-            raise TypeError("width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """Method recover the value height Rectangle"""
+        """Method recover the value Height Rectangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Method that set the value of height attribute"""
+        """Method Evaluate the value of heigth"""
         if type(value) is not int:
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise TypeError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
