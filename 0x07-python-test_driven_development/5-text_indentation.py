@@ -7,7 +7,8 @@ text with 2 new lines after each of these characters
 
 def text_indentation(text):
     """ Identation with these characters
-    these characters: ., ? and : """
+    these characters: ., ? and :
+    """
     i = 0
     if type(text) is not str:
         raise TypeError("text must be a string")
