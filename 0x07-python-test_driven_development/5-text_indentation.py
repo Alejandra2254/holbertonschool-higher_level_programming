@@ -7,10 +7,11 @@ text with 2 new lines after each of these characters
 
 def text_indentation(text):
     """ Identation with these characters
-    these characters: ., ? and : """
-    i = 0
+    these characters: ., ? and :
+    """
     if type(text) is not str:
         raise TypeError("text must be a string")
+    i = 0
     while i < len(text):
         print("{}".format(text[i]), end="")
         if text[i] in [".", "?", ":"]:
