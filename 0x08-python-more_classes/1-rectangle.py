@@ -2,6 +2,8 @@
 """
 Write a class Rectangle that defines a rectangl
 """
+
+
 class Rectangle:
     """
     Class Rectangle with attributes width and height
@@ -9,7 +11,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """constructor function"""
         self.width = width
-        self.heigth = height
+        self.height = height
 
     @property
     def width(self):
