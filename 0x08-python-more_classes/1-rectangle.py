@@ -24,7 +24,7 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
-            raise typeError("width must be >= 0")
+            raise TypeError("width must be >= 0")
         self.__width = value
 
     @property
@@ -38,5 +38,5 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError("heigth must be an integer")
         if value < 0:
-            raise typeError("height must be >= 0")
+            raise TypeError("height must be >= 0")
         self.__height = value
