@@ -11,3 +11,15 @@ class Rectangle(BaseGeometry):
         self.__height = height
         super().integer_validator("width", width)
         super().integer_validator("height", height)
+
+    def __str__(self):
+        """
+        define str print a string unofficial
+        """
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+    def area(self):
+        """
+        class Rectangle that inherits from BaseGeometry
+        """
+        return self.__width * self.__height
