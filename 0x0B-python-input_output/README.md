@@ -52,7 +52,14 @@ brightness_4
 with open('file_path', 'w') as file: 
     file.write('hello world !') 
 ```
-What is JSON
+### What is JSON
+ JSON (JavaScript Object Notation),
+ * JSON is a syntax for storing and exchanging data.
+ * JSON is text, written with JavaScript object notation.
+ Python has a built-in package called json, which can be used to work with JSON data.
+ 
+ Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and serializing by hand becomes complicated.
+ 
 What is serialization
 What is deserialization
 How to convert a Python data structure to a JSON string
