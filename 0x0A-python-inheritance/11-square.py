@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" This module to implement str on square """
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
