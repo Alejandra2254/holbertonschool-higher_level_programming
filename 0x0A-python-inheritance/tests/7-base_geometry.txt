@@ -70,3 +70,8 @@ Validate cases:
 	 Traceback (most recent call last):
     	 ...
 	 TypeError: ale must be an integer
+	 
+	 >>> bg.integer_validator("Holbie", [-10, 3, 9])
+    	 Traceback (most recent call last):
+	 ...
+	 TypeError: Holbie must be an integer
