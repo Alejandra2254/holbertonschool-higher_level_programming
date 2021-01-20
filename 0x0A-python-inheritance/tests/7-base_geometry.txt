@@ -33,6 +33,8 @@ Validate cases:
 
 	 >>> bg.integer_validator("Cali", -153)
 	 Traceback (most recent call last):
+	 ...
+	 ValueError: Cali must be greater than 0
 	 
 	 >>> bg.integer_validator("age", (4,))
 	 Traceback (most recent call last):
@@ -43,9 +45,7 @@ Validate cases:
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: age must be an integer
-	 ...
-	 ValueError: Cali must be greater than 0
-
+	 
 	 >>> bg.integer_validator("SF", 0)
 	 Traceback (most recent call last):
 	 ...
