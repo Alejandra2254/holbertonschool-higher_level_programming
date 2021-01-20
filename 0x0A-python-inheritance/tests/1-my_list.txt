@@ -20,12 +20,7 @@ Validate cases:
     	[1, 2, 3, 4, 5]
     	>>> print(my_list)
     	[1, 4, 2, 3, 5]
-	>>> my_list.append(-5)
-	>>> my_list.append(0)
-	>>> print(my_list)
-	[1, 4, 2, 3, 5, -5, 0]
+	>>> my_list.append(20)
+	>>> my_list.append(-10)
 	>>> my_list.print_sorted()
-	[-5, 0, 1, 2, 3, 4, 5]
-	>>> print(my_list)
-	[1, 4, 2, 3, 5, -5, 0]
-	
+	[-10, 1, 2, 3, 4, 5, 20]
