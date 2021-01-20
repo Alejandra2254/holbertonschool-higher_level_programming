@@ -8,11 +8,6 @@ Using ``integer validator``
 	
 Validate cases:
 	
-	 >>> bg.area()
-	 Traceback (most recent call last):
-    	 ...
-	 Exception: area() is not implemented
-
 	 >>> bg = BaseGeometry()
 
 	 >>> bg.integer_validator("my_int", 12)
@@ -45,3 +40,8 @@ Validate cases:
 	 Traceback (most recent call last):
 	 ...
 	 ValueError: SF must be greater than 0
+	 
+	 >>> bg.integer_validator("age", [3])
+	Traceback (most recent call last):
+    	...
+	TypeError: age must be an integer
