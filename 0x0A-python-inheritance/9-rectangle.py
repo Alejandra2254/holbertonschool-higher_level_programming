@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" this module to add str and area module"""
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
