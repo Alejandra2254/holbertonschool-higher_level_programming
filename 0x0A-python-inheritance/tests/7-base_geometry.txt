@@ -85,3 +85,8 @@ Validate cases:
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: integer_validator() missing 1 required positional argument: 'value'
+	 
+	 >>> bg.integer_validator("ale", 3.0)
+   	 Traceback (most recent call last):
+	 ...
+    	 TypeError: ale must be an integer
