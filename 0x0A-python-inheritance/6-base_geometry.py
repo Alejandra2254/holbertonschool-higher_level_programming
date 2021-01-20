@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" This module to start to use the BaseGeometry object"""
+
+
 class BaseGeometry:
     """class BaseGeometry based on task 5 but with
     other instances"""
