@@ -1,12 +1,57 @@
 # 0x0B. Python - Input/Output
 
-How to open a file
-How to write text in a file
-How to read the full content of a file
+### How to open a file
+
+The open() function opens a file, and returns it as a file object.
+```open(file, mode)```
+where
+* file	The path and name of the file
+* mode	A string, define which mode you want to open the file in:
+
+"r" - Read - Default value. Opens a file for reading, error if the file does not exist
+"a" - Append - Opens a file for appending, creates the file if it does not exist
+"w" - Write - Opens a file for writing, creates the file if it does not exist
+"x" - Create - Creates the specified file, returns an error if the file exist
+
+### How to write text in a file
+To write to an existing file, you must add a parameter to the open() function:
+
+"a" - Append - will append to the end of the file
+"w" - Write - will overwrite any existing content
+
+### How to read the full content of a file
+
+The read() method returns the specified number of bytes from the file. Default is -1 which means the whole file.
+```file.read()```
+* size	Optional. The number of bytes to return. Default -1, which means the whole file.
 How to read a file line by line
 How to move the cursor in a file
 How to make sure a file is closed after using it
-What is and how to use the with statement
+### What is and how to use the with statement
+with statement in Python is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common resources like file streams. Observe the following code example on how the use of with statement makes code cleaner.
+```
+# file handling 
+  
+# 1) without using with statement 
+file = open('file_path', 'w') 
+file.write('hello world !') 
+file.close() 
+  
+# 2) without using with statement 
+file = open('file_path', 'w') 
+try: 
+    file.write('hello world') 
+finally: 
+    file.close() 
+```
+ 
+```
+filter_none
+brightness_4
+# using with statement 
+with open('file_path', 'w') as file: 
+    file.write('hello world !') 
+```
 What is JSON
 What is serialization
 What is deserialization
