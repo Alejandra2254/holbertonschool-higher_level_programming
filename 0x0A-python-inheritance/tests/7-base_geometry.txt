@@ -86,7 +86,7 @@ Validate cases:
 	 ...
 	 TypeError: integer_validator() missing 1 required positional argument: 'value'
 	 
-	 >>> bg.integer_validator("foo", 3.0)
+	 >>> bg.integer_validator("ale", 3.0)
    	 Traceback (most recent call last):
 	 ...
-    	 TypeError: foo must be an integer
+    	 TypeError: ale must be an integer
