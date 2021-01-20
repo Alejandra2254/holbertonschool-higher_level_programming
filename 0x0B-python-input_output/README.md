@@ -62,5 +62,33 @@ with open('file_path', 'w') as file:
  
 What is serialization
 What is deserialization
-How to convert a Python data structure to a JSON string
-How to convert a JSON string to a Python data structure
+### How to convert a Python data structure to a JSON string
+```
+import json
+
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+
+# convert into JSON:
+y = json.dumps(x)
+
+# the result is a JSON string:
+print(y)
+```
+### How to convert a JSON string to a Python data structure
+```
+import json
+
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+
+# parse x:
+y = json.loads(x)
+
+# the result is a Python dictionary:
+print(y["age"])
+```
