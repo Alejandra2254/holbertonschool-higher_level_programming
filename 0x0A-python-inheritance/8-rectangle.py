@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Using to create Rectagle inheritance by BAseGeometry"""
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
