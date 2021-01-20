@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" This module yo create a squeare in heritance by rectangle"""
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
