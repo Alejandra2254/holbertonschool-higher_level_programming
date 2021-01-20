@@ -59,4 +59,4 @@ Validate cases:
 	 >>> bg.integer_validator("ale", None)
 	 Traceback (most recent call last):
     	 ...
-	 TypeError: age must be an integer
+	 TypeError: ale must be an integer
