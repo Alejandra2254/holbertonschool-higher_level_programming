@@ -4,6 +4,7 @@
 
 class Student():
     """a class Student that defines a student """
+
     def __init__(self, first_name, last_name, age):
         """Student constructor"""
         self.first_name = first_name
@@ -11,6 +12,7 @@ class Student():
         self.age = age
 
     def to_json(self):
+        """Returns dictionary"""
         flag = False
         if (type(attrs) is list):
             flag = True
@@ -24,4 +26,5 @@ class Student():
                     my_dict[key] = value
         else:
             my_dict = self.__dict__.copy()
+
         return my_dict
