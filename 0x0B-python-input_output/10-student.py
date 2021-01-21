@@ -1,30 +1,30 @@
 #!/usr/bin/python3
-"""define a studen class"""
+"""Class Student """
 
 
-class Student():
-    """a class Student that defines a student """
-
+class Student:
+    """
+    Class for define a student
+    """
     def __init__(self, first_name, last_name, age):
-        """Student constructor"""
+        """
+        Public instance attributes for student
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
-        """Returns dictionary"""
-        flag = False
-        if (type(attrs) is list):
-            flag = True
-            for attr in attrs:
-                if type(attr) is not str:
-                    flag = False
-        if flag is True:
-            my_dict = {}
-            for key, value in self.__dict__.items():
-                if key in attrs:
-                    my_dict[key] = value
-        else:
-            my_dict = self.__dict__.copy()
+    def to_json(self, attrs=None):
+        """
+        Method that return a dictionary
+        Depending the attributes
+        """
+        if type(attrs) is not list:
+            return self.__dict__
+        dict = {}
 
-        return my_dict
+        for i in attrs:
+            validate = getattr(self, i, None)
+            if validate is not None:
+                dict[i] = validate
+        return dict
