@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Class Student """
+
+
 class Student:
     """
     Class for define a student
