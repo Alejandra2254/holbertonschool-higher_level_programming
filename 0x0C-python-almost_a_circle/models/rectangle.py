@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Creating Rectangle class, 
+"""Creating Rectangle class,
 that inheritance from base"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """class Rectangle that inherits from Base"""
+    """
+    class Rectangle that inherits from Base
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         """method constructor"""
         self.width = width
@@ -16,12 +18,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Method to recover value of width"""
+        """
+        Method to recover value of width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Method to evaluate width attribute"""
+        """
+        Method to evaluate width attribute
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,12 +36,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Method to recover value of height"""
+        """
+        Method to recover value of height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Method to evaluate height attribute"""
+        """
+        Method to evaluate height attribute
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -44,12 +54,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Method to recover value of x"""
-        return self.__X
+        """
+        Method to recover value of x
+        """
+        return self.__x
 
     @x.setter
     def x(self, value):
-        """Method to evaluate x attribute"""
+        """
+        Method to evaluate x attribute
+        """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -58,23 +72,27 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Method recover the value Width Rectangle"""
+        """
+        Method recover the value Width Rectangle
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """Method Evaluate the value of width"""
+        """
+        Method Evaluate the value of width
+        """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-    
+
     def area(self):
-        """ public method that returns the area 
+        """ public method that returns the area
         value of the Rectangle instance."""
         return self.__width * self.__height
-    
+
     def display(self):
         """public method that prints in stdout the
         Rectangle instance with the character #"""
@@ -82,7 +100,7 @@ class Rectangle(Base):
         tmp = self.__x
         for i in range(self.__height):
             if self.__y != 0:
-                print("\n")
+                display += self.__y * "\n"
                 self.__y = 0
             for j in range(self.__width):
                 if self.__x != 0:
@@ -100,7 +118,7 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".\
             format(self.id, self.__x, self.__y, self.__width, self.__height)
-    
+
     def update(self, *args, **kwargs):
         """
         public method that assigns an
@@ -139,3 +157,13 @@ class Rectangle(Base):
                     self.id = value
                 else:
                     break
+
+    def to_dictionary(self):
+        """the dictionary representation of a Rectangle"""
+        dict = {}
+        dict['x'] = self.x
+        dict['y'] = self.y
+        dict['id'] = self.id
+        dict['height'] = self.height
+        dict['width'] = self.width
+        return dict
