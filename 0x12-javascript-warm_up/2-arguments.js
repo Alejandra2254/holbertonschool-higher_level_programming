@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Write a script that prints 3 lines
+// print process.argv
 const count = process.argv.length;
 if (count === 2) {
     console.log('No argument');
