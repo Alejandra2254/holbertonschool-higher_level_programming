@@ -1,10 +1,9 @@
 #!/usr/bin/node
 // Write a script that prints 3 lines
-const process = require('process');
-let args = process.argv;
-if (args.length === 3)
+const count = process.argv.length;
+if (count === 3)
     console.log('Argument found');
-else if (args.length > 3)
+else if (count > 3)
     console.log('Arguments found');
 else
     console.log('No argument')
