@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-'''Write a script that lists all states with a name starting with N'''
 import MySQLdb
 import sys
 if __name__ == "__main__":
