@@ -11,4 +11,3 @@ if __name__ == "__main__":
     for state in my_states:
         if state[1][0] == 'N':
             print(state)
-            
