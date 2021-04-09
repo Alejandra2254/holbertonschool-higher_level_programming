@@ -2,10 +2,7 @@
 '''module to find the peak function'''
 
 def find_peak(list_of_integers):
-    '''Find the peak in a list'''
-   #!/usr/bin/python3
-""" Find the Peak"""
-def find_peak(list_of_integers):
+    """find the peak"""
     if list_of_integers == []:
         return
     max = 0
