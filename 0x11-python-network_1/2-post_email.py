@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' takes in a URL and an email, sends a POST request'''
-from urllib import request, parse
+import urllib.request, 
+import urllib.parse
 import sys
 
 
