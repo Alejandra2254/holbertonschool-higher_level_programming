@@ -15,5 +15,5 @@ if __name__ == "__main__":
             print(str(html['id']))
         except ValueError:
             print("Not a valid JSON")
-        else:
-            print("None")
+    else:
+        print("None")
