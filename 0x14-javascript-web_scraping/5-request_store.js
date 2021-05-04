@@ -8,9 +8,9 @@ request(URL, function (error, response, body) {
   if (!error && response.statusCode === 200) {
     const content = body;
     fs.writeFile(file, content, 'utf-8', function (err) {
-        if (err) {
-          return console.log(err);
-        }
-      });
+      if (err) {
+        return console.log(err);
+      }
+    });
   }
 });
