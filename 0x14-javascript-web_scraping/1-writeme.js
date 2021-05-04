@@ -1,9 +1,8 @@
 #!/usr/bin/node
 // function to read a file passing as argumment
-const file = process.argv[2];
-const data = process.argv[3];
+const args = process.argv.slice(2);
 const fs = require('fs');
-fs.writeFile(file, data, 'utf-8', function (err) {
+fs.writeFile(`${args[0]}`, `${args[1]}`, 'utf-8', function (err) {
   if (err) {
     return console.log(err);
   }
