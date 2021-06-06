@@ -1,19 +1,26 @@
 #!/usr/bin/node
 // function to read a file passing as argumment
-const num = process.argv[2];
-const URL = 'https://swapi-api.hbtn.io/api/films/' + num;
 const request = require('request');
-request(URL, function (error, response, body) {
-  if (!error && response.statusCode === 200) {
-    const info = JSON.parse(body);
-    info.characters.forEach(function (element) {
-      request(element, function (error, response, body) {
-        if (!error && response.statusCode === 200) {
-          const infoeach = JSON.parse(body);
-          const name = infoeach.name;
-          console.log(name);
-        }
-      });
-    });
+const url = `https://swapi-api.hbtn.io/api/films/${process.argv[2]}`;
+request(url, function (err, res, body) {
+  if (err) {
+    console.error(err);
+    return;
   }
+  const listCharacters = JSON.parse(body).characters;
+  printCharacter(listCharacters, 0);
 });
+
+function printCharacter (listCharacters, i) {
+  request(listCharacters[i], function (err, res, body) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const name = JSON.parse(body).name;
+    console.log(name);
+    if (i < listCharacters.length - 1) {
+      printCharacter(listCharacters, i + 1);
+    }
+  });
+}
