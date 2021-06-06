@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 """This module takes takes a GitHub repository commits history and list the
 last 10commits.
 Usage:
